@@ -15,13 +15,13 @@
 
   <body>
     <div class="container-fluid text-center">
-      <div class="row">
-        <div class="col-md-12">
-          <h1>Battleship Field</h1>
+      <div class="row mt-3 justify-content-center">
+        <div class="col-md-3">
+          <h1 class="border border-success rounded ">Battleship Field</h1>
         </div>
       </div>
       <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-3 bg-light">
           <h1 class="mb-3">Options</h1>
           <form>
             <div class="form-group row">
@@ -42,6 +42,25 @@
                 </button>
               </div>
             </div>
+            <div class="form-group row mt-5">
+              <div class="col-sm-6 border-right">
+                <h4 class="border border-success rounded">Player Name</h4>
+              </div>
+              <div class="col-sm-6">
+                <h4 class="border border-success rounded">Enemy</h4>
+              </div>
+            </div>
+
+            <div class="form-group row mt-5">
+              <div class="col-sm-6 border-right ">
+                <h5 class="float-left mr-5">Hit Left:</h5>
+                <span>5</span>
+              </div>
+              <div class="col-sm-6">
+                <h5 class="float-left mr-5">Hit Left:</h5>
+                <span>5</span>
+              </div>
+            </div>
             <!-- <div class="form-group row">
               <div class="col-sm-12">
                 <button type="submit" class="btn btn-primary">Sign in</button>
@@ -51,12 +70,20 @@
         </div>
         <div class="col-md-9 border-left">
           <h1>Board</h1>
+          <div class="row ">
+            <div class="col-md-6">
+              <div class="playerBoard"></div>
+            </div>
+            <div class="col-md-6 ">
+              <div class="enemyBoard m-auto"></div>
+            </div>
+          </div>
         </div>
       </div>
-
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by Paolo Lucano
-      </div>
+    </div>
+    <div class="container-fluid "></div>
+    <div class="fixed-bottom p-4">
+      Made with ❤️ by Paolo Lucano
     </div>
 
     <!-- do not remove this bundle.js tag -->
