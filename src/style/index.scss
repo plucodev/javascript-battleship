@@ -22,7 +22,8 @@
 // .board {
 //   margin-top: 5%;
 // }
-.enemyRow div {
+.enemyRow div,
+.playerRow div {
   width: 40px;
   height: 40px;
   border: 1px solid black;

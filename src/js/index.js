@@ -6,8 +6,15 @@ import "../assets/img/4geeks.ico";
 //import 'breathecode-dom'; //DOM override to make JS easier to use
 import "../style/index.scss";
 
-window.onload = function() {
-  let board_div = document.querySelector(".playerBoard");
+// window.onload = function() {
+// }
+
+let startButton = document.querySelector(".start");
+startButton.addEventListener("click", startGame("playerBoard"));
+startButton.addEventListener("click", startGame("enemyBoard"));
+function startGame(name) {
+  let board_div = document.querySelector("." + name);
+  console.log(board_div);
   // board_div.addEventListener("click", shoot, false);
   let num_rows = 10;
   let num_cols = 10;
@@ -21,9 +28,9 @@ window.onload = function() {
 
     // Create the row div with bootstrap
     let row = document.createElement("div");
-    board_div === "enemyBoard"
+    name === "enemyBoard"
       ? (row.className = "row enemyRow")
-      : (row.className = "row enemyRow");
+      : (row.className = "row playerRow");
 
     // Create Columns
     for (var x = 0; x < num_cols; x++) {
@@ -31,7 +38,7 @@ window.onload = function() {
 
       // Add a class id.. THEY CAN NOT START WITH A NUMBER!!!
       let square = document.createElement("div");
-      board_div === "enemyBoard"
+      name === "enemyBoard"
         ? (square.className = "enemyCell-" + y + x)
         : (square.className = "playerCell-" + y + x);
 
@@ -41,4 +48,7 @@ window.onload = function() {
     board.push(arr);
     board_div.appendChild(row);
   }
-};
+}
+
+// startGame("playerBoard");
+// startGame("enemyBoard");

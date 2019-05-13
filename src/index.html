@@ -37,7 +37,7 @@
                 />
               </div>
               <div class="col-sm-3">
-                <button type="submit" class="btn btn-success w-100">
+                <button type="submit" class="btn btn-success w-100 start">
                   Play
                 </button>
               </div>
@@ -69,13 +69,26 @@
           </form>
         </div>
         <div class="col-md-9 border-left">
-          <h1>Board</h1>
           <div class="row ">
-            <div class="col-md-6">
+            <div class="col-md-4">
+              <div class="playerTitle text-primary text-left">
+                <h2>Player</h2>
+              </div>
               <div class="playerBoard"></div>
             </div>
-            <div class="col-md-6 ">
-              <div class="enemyBoard m-auto"></div>
+            <div class="col-md-2">
+              <div class="playerTitle text-primary text-left">
+                <h2>Player Fleet</h2>
+              </div>
+              <div class="playerFleet"></div>
+            </div>
+            <div class="col-md-4 ">
+              <div class="text-danger text-left"><h2>Enemy</h2></div>
+              <div class="enemyBoard "></div>
+            </div>
+            <div class="col-md-2 ">
+              <div class="text-danger text-left"><h2>Enemy Fleet</h2></div>
+              <div class="enemyFleet "></div>
             </div>
           </div>
         </div>
