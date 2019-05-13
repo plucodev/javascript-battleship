@@ -12,9 +12,10 @@ import "../style/index.scss";
 let startButton = document.querySelector(".start");
 startButton.addEventListener("click", startGame("playerBoard"));
 startButton.addEventListener("click", startGame("enemyBoard"));
+
 function startGame(name) {
   let board_div = document.querySelector("." + name);
-  console.log(board_div);
+
   // board_div.addEventListener("click", shoot, false);
   let num_rows = 10;
   let num_cols = 10;
@@ -26,7 +27,7 @@ function startGame(name) {
   for (var y = 0; y < num_rows; y++) {
     let arr = [];
 
-    // Create the row div with bootstrap
+    // Create the row div
     let row = document.createElement("div");
     name === "enemyBoard"
       ? (row.className = "row enemyRow")
@@ -36,7 +37,7 @@ function startGame(name) {
     for (var x = 0; x < num_cols; x++) {
       arr.push(0);
 
-      // Add a class id.. THEY CAN NOT START WITH A NUMBER!!!
+      // Add a class name
       let square = document.createElement("div");
       name === "enemyBoard"
         ? (square.className = "enemyCell-" + y + x)
@@ -48,6 +49,12 @@ function startGame(name) {
     board.push(arr);
     board_div.appendChild(row);
   }
+}
+
+function addShip(shipLength) {
+  let shipAddedDone = false;
+
+  while (!shipAddedDone) {}
 }
 
 // startGame("playerBoard");
