@@ -51,11 +51,16 @@ function startGame(name) {
   }
 }
 
-function addShip(shipLength) {
-  let shipAddedDone = false;
+let randomRow = Math.floor(Math.random() * 11);
+let randomColumn = Math.floor(Math.random() * 11);
+let shipsArray = [[randomColumn, randomRow]];
+console.log(shipsArray);
+// function getRandomRow(rowNumber) {
+//   let randomRow = Math.floor(Math.random() * (rowNumber + 1));
+//   let randomColumn = Math.floor(Math.random() + (rowNumber + 1));
+//   console.log(randomRow + randomColumn);
 
-  while (!shipAddedDone) {}
-}
+//   return randomRow;
+// }
 
-// startGame("playerBoard");
-// startGame("enemyBoard");
+// getRandomRow(10);
