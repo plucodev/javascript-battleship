@@ -64,3 +64,45 @@ console.log(shipsArray);
 // }
 
 // getRandomRow(10);
+
+/************************************
+    ADD SHIP TO THE BOARD RANDOMLY
+*************************************
+*/
+
+addShip(5); // Carrier
+addShip(4); // Battleship
+addShip(3); // Destroyer
+addShip(3); // Submarine
+addShip(2); // Patrol Boat
+console.log(board);
+
+function addShip(ship_length) {
+  let done = false;
+
+  // Loop until all positions are put in place, else pick another random spot and start again
+  while (!done) {
+    // First position randomly picked.. row and column
+    let r = getRandom(num_rows);
+    let c = getRandom(num_cols);
+
+    let ship_position = [[r, c]];
+
+    // If the spot randomly selected is empty
+    if (board[r][c] === 0) {
+      ship_position = position(r, c, ship_length);
+
+      let available = checkAvailability(ship_position);
+
+      // If the spot is available, position ship on the board and end the loop (done = true)
+      if (available) {
+        for (p in ship_position) {
+          board[ship_position[p][0]][ship_position[p][1]] = ship_length;
+        }
+
+        number_of_hits_to_win += ship_length;
+        done = true;
+      }
+    } //if (board[r][c] === 0)
+  } //while (!done)
+}
