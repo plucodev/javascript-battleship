@@ -70,13 +70,6 @@ console.log(shipsArray);
 *************************************
 */
 
-addShip(5); // Carrier
-addShip(4); // Battleship
-addShip(3); // Destroyer
-addShip(3); // Submarine
-addShip(2); // Patrol Boat
-console.log(board);
-
 function addShip(ship_length) {
   let done = false;
 
